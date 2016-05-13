@@ -29,3 +29,5 @@ if [[ -f ~/.vimrc ]]; then
     cp ~/.vimrc ~/.vimrc_copy_$DATE;
   fi
 fi
+
+mv ~/.vimrc_new ~/.vimrc
