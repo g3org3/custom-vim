@@ -6,10 +6,10 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/colors && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim;
 
 echo "Installing Dependencies";
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree && vim -u NONE -c "helptags nerdtree/doc" -c q;
-git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim && vim -u NONE -c "helptags ctrlp.vim/doc" -c q;
-git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline && vim -u NONE -c "helptags vim-airline/doc" -c q;
-git clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive && vim -u NONE -c "helptags vim-fugitive/doc" -c q;
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree;
+git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim;
+git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline;
+git clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive;
 
 echo "Installing Themes"
 curl -LSso ~/.vim/colors/PaperColor.vim https://raw.githubusercontent.com/NLKNguyen/papercolor-theme/master/colors/PaperColor.vim;
