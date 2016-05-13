@@ -22,6 +22,10 @@ cd
 
 #### Step 3
 ```sh
+curl -LSso ~/.vimrc https://raw.githubusercontent.com/g3org3/custom-vim/master/vimrc
+```
+OR copy to ~/.vimrc
+```sh
 # ~/.vimrc
 
 set nu
