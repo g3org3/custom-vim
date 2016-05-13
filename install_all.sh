@@ -14,6 +14,7 @@ git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim;
 git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter;
 git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/bundle/editorconfig-vim;
 git clone https://github.com/powerline/fonts.git ~/.vim/bundle/powerline-fonts;
+git clone https://github.com/terryma/vim-multiple-cursors.git ~/.vim/bundle/vim-multiple-cursors;
 
 echo "Installing Themes"
 curl -LSso ~/.vim/colors/PaperColor.vim https://raw.githubusercontent.com/NLKNguyen/papercolor-theme/master/colors/PaperColor.vim;
