@@ -1,13 +1,11 @@
 set nu
 set ai
 set tabstop=4
+syntax on
 set background=dark
+color PaperColor
 set laststatus=2
 set mouse=a
-
-syntax on
-filetype plugin indent on
-color PaperColor
 execute pathogen#infect()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -31,4 +29,4 @@ let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
 "let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:solarized_termcolors = 256
