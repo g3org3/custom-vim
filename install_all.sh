@@ -8,8 +8,10 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim;
 echo "Installing Dependencies";
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree;
 git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim;
-git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline;
-git clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive;
+git clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/vim-airline;
+git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive;
+git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
+git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 
 echo "Installing Themes"
 curl -LSso ~/.vim/colors/PaperColor.vim https://raw.githubusercontent.com/NLKNguyen/papercolor-theme/master/colors/PaperColor.vim;
