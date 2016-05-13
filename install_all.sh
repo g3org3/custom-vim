@@ -16,7 +16,7 @@ curl -LSso ~/.vimrc_new https://raw.githubusercontent.com/g3org3/custom-vim/mast
 if [[ -f ~/.vimrc ]]; then
   DIFF=`diff ~/.vimrc ~/.vimrc_new`;
   if [[ -n "$DIFF" ]]; then
-    DATE=`date +%Y-%m-%d:%H:%M:%S`;
+    DATE=`date +%Y-%m-%d`;
     echo "::::::::::: WARNING :::::::::::::::::::"
     echo "You had an existing vimrc, creating backup: $DATE"
     echo -e ":::::::::::::::::::::::::::::::::::::::\n"
