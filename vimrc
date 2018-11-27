@@ -2,13 +2,13 @@ set nu
 set ai
 set tabstop=4
 syntax on
-set background=dark
-color PaperColor
 set laststatus=2
 set mouse=a
 execute pathogen#infect()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set listchars=tab:\|\ ,eol:¬
+set list
 
 let mapleader = "\<Space>"
 nnoremap <leader>rv :source $MYVIMRC<CR>
@@ -29,4 +29,24 @@ let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
 "let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
+
 let g:solarized_termcolors = 256
+
+" JSX syntax highlight
+let g:jsx_ext_required = 0
+
+let g:ctrlp_custom_ignore='node_modules'
+
+set encoding=utf8
+
+ " Theme
+syntax enable
+set t_Co=256
+colorscheme OceanicNext
+colorscheme PaperColor
+set background=dark
+let g:airline_theme='oceanicnext'
+
+let base16colorspace=256
+
+"colo base16-default-dark
