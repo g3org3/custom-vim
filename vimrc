@@ -42,9 +42,11 @@ set encoding=utf8
  " Theme
 syntax enable
 set t_Co=256
-colorscheme OceanicNext
+"colorscheme OceanicNext
 colorscheme PaperColor
 set background=dark
+" this is now deprecated
+" let g:airline_theme='oceanicnext'
 
 let base16colorspace=256
 
