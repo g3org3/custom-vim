@@ -1,6 +1,6 @@
 set nu
 set ai
-set tabstop=4
+set tabstop=2
 syntax on
 set laststatus=2
 set mouse=a
@@ -42,8 +42,8 @@ set encoding=utf8
  " Theme
 syntax enable
 set t_Co=256
-"colorscheme OceanicNext
-colorscheme PaperColor
+colorscheme OceanicNext
+"colorscheme PaperColor
 set background=dark
 " this is now deprecated
 " let g:airline_theme='oceanicnext'
@@ -51,3 +51,12 @@ set background=dark
 let base16colorspace=256
 
 "colo base16-default-dark
+
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+
