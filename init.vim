@@ -41,6 +41,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 call plug#end()
 
 " Setup Plugins
@@ -48,12 +50,20 @@ colo gruvbox
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" NvimTree
+lua require'nvim-tree'.setup()
+nnoremap <C-l> :NvimTreeToggle<cr>
 
 " Gitsigns
 lua require'gitsigns'.setup()
 nnoremap <leader>g :Gitsigns toggle_numhl<cr>:Gitsigns toggle_signs<cr>:Gitsigns toggle_current_line_blame<cr>
 nnoremap <leader>k :Gitsigns preview_hunk<cr>
 nnoremap <leader>u :Gitsigns reset_hunk<cr>
+
+" Fugitive
+nnoremap <leader>f :Gclog<cr>
