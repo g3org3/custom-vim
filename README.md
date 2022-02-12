@@ -5,6 +5,7 @@ curl -Ss https://raw.githubusercontent.com/g3org3/custom-vim/master/install_all.
 # warning, this script overwrites your existing ~/.vimrc
 ```
 
+---
 
 ## nvim
 
@@ -25,4 +26,8 @@ install macosx
 
 ```sh
 brew install neovim
+```
+
+```sh
+wget https://raw.githubusercontent.com/g3org3/custom-vim/master/init.vim
 ```
