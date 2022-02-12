@@ -5,6 +5,13 @@ curl -Ss https://raw.githubusercontent.com/g3org3/custom-vim/master/install_all.
 # warning, this script overwrites your existing ~/.vimrc
 ```
 
+install vim-plug
+
+```sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
 ---
 
 ## nvim
@@ -12,8 +19,8 @@ curl -Ss https://raw.githubusercontent.com/g3org3/custom-vim/master/install_all.
 install vim-plug
 
 ```sh
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
 install nvim ubuntu
