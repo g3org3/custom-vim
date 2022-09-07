@@ -25,10 +25,9 @@ let mapleader = "\<Space>"
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>rc :tabe ~/.config/nvim/init.vim<CR>
+nnoremap <C-t> :tabe<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <C-i> :tabn<CR>
-
-
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -43,6 +42,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Setup Plugins
@@ -66,4 +66,8 @@ nnoremap <leader>k :Gitsigns preview_hunk<cr>
 nnoremap <leader>u :Gitsigns reset_hunk<cr>
 
 " Fugitive
-nnoremap <leader>f :Gclog<cr>
+nnoremap <leader>fl :Gclog<cr>
+
+" Eslint autofix
+nnoremap <leader>ie :CocInstall coc-eslint<cr>
+nnoremap <leader>e :CocCommand eslint.executeAutofix<cr>
