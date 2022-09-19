@@ -27,7 +27,7 @@ nnoremap <leader>x :x<CR>
 nnoremap <leader>rc :tabe ~/.config/nvim/init.vim<CR>
 nnoremap <C-t> :tabe<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <C-i> :tabn<CR>
+nnoremap <C-j> :tabn<CR>
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -36,7 +36,7 @@ set cmdheight=2
 call plug#begin('~/.vim/pluged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim' "https://github.com/BurntSushi/ripgrep#installation
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'lewis6991/gitsigns.nvim'
@@ -69,5 +69,14 @@ nnoremap <leader>u :Gitsigns reset_hunk<cr>
 nnoremap <leader>fl :Gclog<cr>
 
 " Eslint autofix
-nnoremap <leader>ie :CocInstall coc-eslint<cr>
-nnoremap <leader>e :CocCommand eslint.executeAutofix<cr>
+" nnoremap <leader>i :CocInstall coc-eslint coc-json coc-tsserver<cr>
+" nnoremap <leader>e :CocCommand eslint.executeAutofix<cr>
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
