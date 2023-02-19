@@ -38,3 +38,11 @@ brew install neovim
 ```sh
 wget https://raw.githubusercontent.com/g3org3/custom-vim/master/init.vim
 ```
+
+
+Coc.nvim list
+locate coc.nvim if problems with build/index, you need to find and yarn install .local/share for mac
+- coc-eslint
+- coc-json
+- coc-snippets
+- coc-tsserver
