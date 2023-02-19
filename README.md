@@ -46,3 +46,10 @@ locate coc.nvim if problems with build/index, you need to find and yarn install 
 - coc-json
 - coc-snippets
 - coc-tsserver
+
+
+-- new config
+add to kcickstart
+
+https://github.com/neoclide/coc.nvim
+https://github.com/kessejones/git-blame-line.nvim
