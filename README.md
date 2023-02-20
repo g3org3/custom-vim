@@ -41,15 +41,21 @@ wget https://raw.githubusercontent.com/g3org3/custom-vim/master/init.vim
 
 
 Coc.nvim list
+
+
 locate coc.nvim if problems with build/index, you need to find and yarn install .local/share for mac
+
 - coc-eslint
 - coc-json
 - coc-snippets
 - coc-tsserver
+- coc-java
+- coc-styled-components
 
 
--- new config
-add to kcickstart
+-- 
+new config
+- add to kcickstart
 
-https://github.com/neoclide/coc.nvim
-https://github.com/kessejones/git-blame-line.nvim
+- https://github.com/neoclide/coc.nvim
+- https://github.com/kessejones/git-blame-line.nvim
