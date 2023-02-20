@@ -1,0 +1,14 @@
+{
+  "eslint.autoFixOnSave": true,
+  "java.jdt.ls.java.home": "/home/Jorge/.sdkman/candidates/java/17.0.6-tem",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-11",
+      "path": "/home/Jorge/.sdkman/candidates/java/11.0.12-open"
+    },
+    {
+      "name": "JavaSE-17",
+      "path": "/home/Jorge/.sdkman/candidates/java/17.0.6-tem"
+    }
+  ]
+}
