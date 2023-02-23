@@ -59,3 +59,9 @@ new config
 
 - https://github.com/neoclide/coc.nvim
 - https://github.com/kessejones/git-blame-line.nvim
+
+
+
+```
+npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier
+```
