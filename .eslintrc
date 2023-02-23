@@ -1,0 +1,33 @@
+{
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "extends": [
+    "eslint-config-prettier",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier",
+    "eslint-plugin-prettier"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "newline-before-return": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 110,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": false,        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "arrowParens": "always"
+      }
+    ]
+  }
+}
