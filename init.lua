@@ -124,6 +124,12 @@ require('lazy').setup({
       },
     },
   },
+  {
+    'olivercederborg/poimandres.nvim',
+    config = function()
+      vim.cmd.colorscheme 'poimandres'
+    end,
+  },
 
   { -- Theme inspired by Atom
     'navarasu/onedark.nvim',
@@ -516,7 +522,7 @@ require('git-blame-line').setup({
     },
     view = {
         left_padding_size = 5,
-        enable_cursor_hold = true
+        enable_cursor_hold = false
     }
 })
 
@@ -576,4 +582,3 @@ keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
