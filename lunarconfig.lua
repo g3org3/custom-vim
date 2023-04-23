@@ -10,9 +10,9 @@ vim.opt.relativenumber = true
 -- general
 lvim.log.level = "info"
 lvim.format_on_save = {
-	enabled = true,
-	pattern = "*.lua",
-	timeout = 1000,
+  enabled = true,
+  pattern = "*.lua",
+  timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
 lvim.use_icons = true
@@ -26,7 +26,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>p", '"_dP')
-vim.keymap.set("n", "<leader>t", ":tabe<CR>")
+vim.keymap.set("n", "<leader>te", ":tabe<CR>")
+-- vim.keymap.set("n", "<leader>tf", ":!./node_modules/.bin/eslint ./src --fix<CR>")
 
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
@@ -82,62 +83,63 @@ lvim.builtin.treesitter.auto_install = true
 -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
-	{ command = "stylua" },
-	{ command = "black" },
-	-- {
-	-- 	command = "eslint",
-	-- 	filetypes = { "typescriptreact" },
-	-- 	args = { "--fix-dry-run", "--format", "json", "--stdin", "--stdin-filename", "$PATH_TO_FILE" },
-	-- },
-	-- {
-	--   command = "prettier",
-	--   filetypes = { "typescript", "typescriptreact" },
-	-- },
+  { command = "stylua" },
+  { command = "black" },
+  {
+    command = "eslint",
+    filetypes = { "typescript", "typescriptreact", "javascript", "astro" },
+  },
 })
 local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
-	{
-		command = "eslint",
-		filetypes = { "typescriptreact", "typescript", "javascript" },
-	},
-	{ command = "flake8", filetypes = { "python" } },
-	{
-		command = "shellcheck",
-		args = { "--severity", "warning" },
-	},
+  {
+    command = "eslint",
+    filetypes = { "typescriptreact", "typescript", "javascript", "astro" },
+  },
+  { command = "flake8", filetypes = { "python" } },
+  {
+    command = "shellcheck",
+    args = { "--severity", "warning" },
+  },
 })
 
 -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-	{
-		"folke/trouble.nvim",
-		cmd = "TroubleToggle",
-	},
-	{ "sainnhe/gruvbox-material" },
-	{ "nvim-tree/nvim-web-devicons" },
-	{
-		"folke/todo-comments.nvim",
-		event = "BufRead",
-		config = function()
-			require("todo-comments").setup()
-		end,
-	},
-	{
-		"folke/persistence.nvim",
-		event = "BufReadPre",
-		config = function()
-			require("persistence").setup({
-				dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"),
-				options = { "buffers", "curdir", "tabpages", "winsize" },
-			})
-		end,
-	},
-	{ "mattkubej/jest.nvim" },
-	{ "neoclide/coc.nvim" },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  { "sainnhe/gruvbox-material" },
+  { "nvim-tree/nvim-web-devicons" },
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    config = function()
+      require("persistence").setup({
+        dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"),
+        options = { "buffers", "curdir", "tabpages", "winsize" },
+      })
+    end,
+  },
+  { "mattkubej/jest.nvim" },
+  -- { "neoclide/coc.nvim" },
 }
 
-vim.keymap.set("n", "gtd", "<Plug>(coc-definition)", { silent = true })
-vim.keymap.set("n", "gtr", "<Plug>(coc-references)", { silent = true })
+-- vim.keymap.set("n", "gtd", "<Plug>(coc-definition)", { silent = true })
+-- vim.keymap.set("n", "gtr", "<Plug>(coc-references)", { silent = true })
+lvim.builtin.which_key.mappings["l"]["f"] = {
+  function()
+    require("lvim.lsp.utils").format({ timeout_ms = 5000 })
+  end,
+  "Format",
+}
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "zsh",
