@@ -139,12 +139,15 @@ lvim.plugins = {
 			})
 		end,
 	},
-	-- {
-	-- 	"aserowy/tmux.nvim",
-	-- 	config = function()
-	-- 		return require("tmux").setup()
-	-- 	end,
-	-- },
+	{
+		"aserowy/tmux.nvim",
+		config = function()
+			return require("tmux").setup({
+				redirect_to_clipboard = true,
+				sync_clipboard = false,
+			})
+		end,
+	},
 }
 
 lvim.builtin.which_key.mappings["l"]["f"] = {
