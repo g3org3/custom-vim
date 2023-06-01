@@ -65,3 +65,8 @@ new config
 ```
 npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier
 ```
+
+
+```
+export $(cat env.properties | grep -v \# | grep -v -e '^$' | xargs)
+```
