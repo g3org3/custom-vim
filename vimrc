@@ -1,6 +1,6 @@
 set nu
 set ai
-set tabstop=2
+set tabstop=2 shiftwidth=2 expandtab
 syntax on
 set laststatus=2
 set mouse=a
