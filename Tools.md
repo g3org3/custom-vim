@@ -14,3 +14,6 @@
   - https://github.com/zsh-users/zsh-syntax-highlighting
   - https://github.com/romkatv/powerlevel10k
 - https://www.lunarvim.org
+- https://github.com/Schniz/fnm
+- https://sdkman.io
+- https://direnv.net
