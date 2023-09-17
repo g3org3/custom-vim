@@ -1,0 +1,16 @@
+# Tools
+
+- https://github.com/dylanaraps/neofetch
+- https://github.com/neovim/neovim
+  - https://github.com/nvim-lua/kickstart.nvim
+- https://github.com/junegunn/fzf
+- https://github.com/sharkdp/bat
+- https://github.com/BurntSushi/ripgrep
+- https://github.com/ogham/exa
+- https://github.com/gpakosz/.tmux
+- https://github.com/denisidoro/navi
+- https://github.com/ohmyzsh/ohmyzsh
+  - https://github.com/zsh-users/zsh-autosuggestions
+  - https://github.com/zsh-users/zsh-syntax-highlighting
+  - https://github.com/romkatv/powerlevel10k
+- https://www.lunarvim.org
