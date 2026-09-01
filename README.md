@@ -85,3 +85,8 @@ rclone copy dropbox: /var/ssd/dropbox_backup \
   --fast-list \
   --log-file=/var/ssd/rclone.log --log-level INFO
 
+
+wget https://github.com/restic/restic/releases/download/v0.19.0/restic_0.19.0_linux_arm64.bz2
+
+
+curl https://rclone.org/install.sh | sudo bash
