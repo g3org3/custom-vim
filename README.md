@@ -77,5 +77,11 @@ restic
 
 
 
-
+rclone copy dropbox: /var/ssd/dropbox_backup \
+  --progress \
+  --transfers=8 \
+  --checkers=16 \
+  --tpslimit=12 \
+  --fast-list \
+  --log-file=/var/ssd/rclone.log --log-level INFO
 
